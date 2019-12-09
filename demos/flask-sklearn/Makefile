@@ -26,13 +26,4 @@ lint:
 	# This should be run from inside a virtualenv
 	pylint --disable=R,C,W1203 app.py
 
-validate-circleci:
-    circleci config process .circleci/config.yml
-
-run-circleci-local:
-    circleci local execute
-
-lint: # This line should already be there with regular pylint
-    hadolint path/to/Dockerfile
-
 all: install lint test

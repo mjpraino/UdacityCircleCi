@@ -10,15 +10,15 @@ test:
 	#python -m pytest --nbval notebook.ipynb
 
 validate-circleci:
-	#See https://circleci.com/docs/2.0/local-cli/#processing-a-config
-	circleci config process
+	# See https://circleci.com/docs/2.0/local-cli/#processing-a-config
+	circleci config process .circleci/config.yml
 
 run-circleci-local:
-	#See https://circleci.com/docs/2.0/local-cli/#running-a-job
+	# Scbee https://circleci.com/docs/2.0/local-cli/#running-a-job
 	circleci local execute
 
 lint:
-	hadolint demos/flask-sklearn-student-starter/Dockerfile
+	hadolint demos/flask-sklearn/Dockerfile
 	pylint --disable=R,C,W1203 demos/**/**.py
 
 all: install lint test
