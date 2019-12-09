@@ -2,7 +2,7 @@ FROM python:3.7.3-stretch
 
 ## Complete Step 1:
 # Create a Working Directory
-WORKDIR / app
+WORKDIR /app
 
 ## Complete Step 2:
 # Copy source code to working directory
